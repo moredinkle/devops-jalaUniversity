@@ -42,6 +42,8 @@ available commands:
  + list
  + start *vm_name*
  + shutdown *vm_name*
+ + create *vm_name*
+ + delete *vm_name*
  + help
  + exit"""
 
@@ -57,7 +59,7 @@ while(True):
     if(cmd == "list"): list()
     elif("start" in cmd): checkMachine(cmd, "start")
     elif("shutdown" in cmd): checkMachine(cmd, "shutdown")
-    # elif("create" in cmd): create(cmd.split()[1])
-    # elif("delete" in cmd): delete(cmd.split()[1])
+    elif("create" in cmd): create(cmd.split()[1])
+    elif("delete" in cmd): delete(cmd.split()[1])
     elif(cmd == "exit"): break
     elif(cmd == "help"): print(txt)
